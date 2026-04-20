@@ -12,7 +12,7 @@ export default function Login() {
   const handleLogin = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      nav("/");
+      nav("/"); // ✅ redirect
     } catch (err) {
       alert(err.message);
     }

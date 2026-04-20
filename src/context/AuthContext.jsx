@@ -8,17 +8,20 @@ export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true); // ✅ important
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (u) => {
-      setUser(u);
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false); // ✅ stop loading
     });
-    return () => unsub();
+
+    return () => unsubscribe();
   }, []);
 
   return (
     <AuthContext.Provider value={{ user }}>
-      {children}
+      {!loading && children} {/* ✅ wait until auth ready */}
     </AuthContext.Provider>
   );
 };
