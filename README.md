@@ -1,16 +1,49 @@
-# React + Vite
+# 🎮 Gamer Performance Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Overview
+This project is a web application built using React and Firebase.  
+It helps gamers track their match performance and analyze their gameplay over time.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🎯 Problem Statement
+Many gamers play regularly but do not track their performance.  
+Because of this, they don’t know if they are improving or not.
 
-## React Compiler
+This app solves that problem by allowing users to:
+- Store match data
+- Track performance stats
+- View improvement over time
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
+- User Signup & Login (Firebase Authentication)
+- Add match details (kills, deaths, assists, map, agent, result)
+- Delete matches
+- View total matches, K/D ratio, and win rate
+- Graph showing performance trend
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+- React (Frontend)
+- Firebase (Authentication + Database)
+- Recharts (for graphs)
+- CSS (for styling)
+
+---
+
+## 📂 Folder Structure
+src/
+- components/
+- pages/
+- context/
+- services/
+
+---
+
+## ▶️ How to Run
+1. Clone the repository
+2. Open terminal in project folder
+3. Run:
